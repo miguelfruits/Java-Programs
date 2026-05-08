@@ -1,0 +1,83 @@
+Java Streams (introduced in Java 8) are used to process collections of data in a clean and functional way—like filtering, mapping, sorting, etc
+
+import java.util.*;
+import java.util.stream.*;
+
+public class StreamExample1 {
+    public static void main(String[] args) {
+        List<Integer> numbers = Arrays.asList(10, 20, 30, 40, 50);
+
+        numbers.stream()
+               .filter(n -> n > 25)
+               .forEach(System.out::println);
+    }
+}
+
+import java.util.*;
+import java.util.stream.*;
+
+public class StreamExample2 {
+    public static void main(String[] args) {
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4);
+
+        numbers.stream()
+               .map(n -> n * n)
+               .forEach(System.out::println);
+    }
+}
+
+import java.util.*;
+import java.util.stream.*;
+
+public class StreamExample3 {
+    public static void main(String[] args) {
+        List<String> names = Arrays.asList("Parth", "Amit", "Rahul", "Ankit");
+
+        names.stream()
+             .filter(name -> name.startsWith("A"))
+             .map(String::toUpperCase)
+             .forEach(System.out::println);
+    }
+}
+
+
+import java.util.*;
+import java.util.stream.*;
+
+public class StreamExample4 {
+    public static void main(String[] args) {
+        List<Integer> numbers = Arrays.asList(5, 1, 4, 2, 3);
+
+        numbers.stream()
+               .sorted()
+               .forEach(System.out::println);
+    }
+}
+
+import java.util.*;
+import java.util.stream.*;
+
+public class StreamExample6 {
+    public static void main(String[] args) {
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+
+        List<Integer> evenNumbers = numbers.stream()
+                                           .filter(n -> n % 2 == 0)
+                                           .collect(Collectors.toList());
+
+        System.out.println(evenNumbers);
+    }
+}
+
+import java.util.*;
+import java.util.stream.*;
+
+public class StreamExample4 {
+    public static void main(String[] args) {
+        List<Integer> numbers = Arrays.asList(5, 1, 4, 2, 3);
+
+        numbers.stream()
+               .sorted()
+               .forEach(System.out::println);
+    }
+}
