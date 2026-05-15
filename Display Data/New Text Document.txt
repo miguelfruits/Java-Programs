@@ -1,0 +1,2 @@
+javac -cp ".;conn.jar" Connection_class.java
+java -cp ".;conn.jar" Connection_class

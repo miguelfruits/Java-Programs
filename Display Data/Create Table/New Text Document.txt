@@ -1,0 +1,2 @@
+javac -cp ".;conn.jar" Create_Table.java
+java -cp ".;conn.jar" Create_Table
